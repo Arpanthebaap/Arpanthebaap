@@ -14,8 +14,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Ph.D._Alignment-CS_%2F_Environmental_Informatics-blue?style=flat-square" alt="PhD Alignment">
+  <img src="https://img.shields.io/badge/Ph.D._Alignment-Digital_Agriculture_%26_AI-blue?style=flat-square" alt="PhD Alignment">
   <img src="https://img.shields.io/badge/Focus-Multi--Agent_Orchestration-teal?style=flat-square" alt="Focus">
+  <img src="https://img.shields.io/badge/Domain-AI_in_Agriculture_%26_Biosystems-darkgreen?style=flat-square" alt="Domain">
   <img src="https://img.shields.io/badge/Methodology-Physics--Informed_&_Verifiable_AI-forestgreen?style=flat-square" alt="Methodology">
   <img src="https://img.shields.io/badge/Open_Source-Reproducible_Prototypes-orange?style=flat-square" alt="Open Source">
 </p>
@@ -24,7 +25,7 @@
 
 ## 🔬 Academic Profile & Research Philosophy
 
-I am an Applied AI Researcher working at the critical intersection of **autonomous multi-agent orchestration**, **multimodal earth observation**, and **verifiable, physics-informed machine learning** for agroecosystem health, voluntary carbon-credit accounting, and supply-chain risk modeling.
+I am an Applied AI Researcher working at the critical intersection of **autonomous multi-agent orchestration**, **multimodal earth observation**, and **verifiable, physics-informed machine learning** for agroecosystem health, voluntary carbon-credit accounting, and agricultural supply-chain risk modeling.
 
 My academic perspective unites formal postgraduate research in **Agribusiness Management and Digital Market Economics** with undergraduate laboratory training in **Biotechnology (cellular kinetics and molecular assays)** and production systems engineering across **20+ deployed AI prototypes and 6 client systems**. 
 
@@ -33,7 +34,7 @@ Rather than relying on unconstrained generative heuristics, my research emphasiz
 2. **Deterministic Safety & Auditability:** Enforcing strict schema validation, dual-evidence regulatory citation layers, and cryptographic agent authorization (HMAC-SHA256).
 3. **Open-Source Reproducibility & Honesty:** Explicitly categorizing algorithms into runnable baselines, simplified approximations, and open future research directions.
 
-> **Doctoral Objective:** Seeking Ph.D. positions and cross-disciplinary research partnerships in **Computer Science, Intelligent Systems, and Environmental Informatics** (2026/2027 academic intake).
+> **Doctoral Objective:** Seeking Ph.D. positions and cross-disciplinary research partnerships in **AI in Agriculture, Digital Agriculture, Intelligent Systems, and Environmental Informatics** (2026/2027 academic intake).
 
 ---
 
@@ -54,20 +55,33 @@ Rather than relying on unconstrained generative heuristics, my research emphasiz
 
 ## 🧭 Active Doctoral Research Agenda
 
-### **Track 1: AI-Driven Carbon Farming & Agroecosystem Sustainability Monitoring**
-*A Multi-Agent Architecture Interfacing Remote Sensing with Physics-Informed Carbon & Nutrient Modeling*
-- **The Challenge:** Traditional soil organic carbon (SOC) verification relies on high-transaction-cost physical soil coring, while optical satellite imagery is blinded by weeks of monsoon cloud cover over smallholder plots.
-- **The Approach:** A decoupled multi-agent AI system featuring:
-  - Constrained Non-Negative Least Squares (NNLS) spectral unmixing to disaggregate heterogeneous sub-acre intercropped plots.
-  - A Pix2Pix U-Net Generative Adversarial Network reconstructing optical surface parameters from Synthetic Aperture Radar (SAR Sentinel-1 backscatter).
-  - Physics-Informed Neural Networks (PINNs) embedding closed-form soil $Q_{10}$ turnover kinetic equations with remote-sensing temperature/moisture proxies.
+My proposed doctoral inquiries address the structural challenges of agricultural monitoring and financial inclusion under severe data-scarcity, monsoon cloud occlusions, and infrastructure constraints. This research builds directly on three open-source, deployed systems:
 
-### **Track 2: Robust, Resource-Constrained AI for Underserved Agricultural Systems**
+### **Track 1: AI-Driven Carbon Farming & Agroecosystem Sustainability Monitoring**
+*A Multi-Agent Architecture Interfacing Remote Sensing with In-Situ Vision & Physics-Informed Kinetics*
+
+- **The Challenge:** Traditional soil organic carbon (SOC) verification relies on high-transaction-cost physical soil coring, while optical satellite imagery is blinded by weeks of monsoon cloud cover over fragmented, sub-acre smallholder plots.
+- **The Core Approach & Deployed Implementations:**
+  - **Macro-Scale Earth Observation via [AgriSentinel](https://github.com/Arpanthebaap/agrisentinel):**
+    - Constrained Non-Negative Least Squares (NNLS) spectral unmixing disaggregating intercropped micro-plots against vegetation endmembers.
+    - A Pix2Pix U-Net Generative Adversarial Network translating Sentinel-1 Synthetic Aperture Radar (SAR) backscatter into synthetic optical surface parameters to bypass persistent cloud cover.
+    - Physics-Informed Neural Networks (PINNs) embedding closed-form soil $Q_{10}$ turnover kinetic equations with remote-sensing temperature/moisture proxies to model SOC trajectories without recurring core sampling.
+  - **In-Situ Ecological Ground-Truthing via [Leyloom](https://github.com/Arpanthebaap/leyloom):**
+    - Computer vision classifier evaluating quadrat field photography of species-rich agricultural leys.
+    - Categorizes grass, legume, forb, and senescent fractions; continuously logs the **Shannon-Wiener ecological diversity index ($H'$)** per plot and timestamp with an open validation protocol calibrated against manual reference quadrats.
+  - **Telemetry Pipeline Robustness via [Betulog](https://github.com/Arpanthebaap/betulog):**
+    - Semantic anomaly detection engine for distributed agricultural IoT telemetry and soil sensor logs.
+    - Ingests unstructured system telemetry into dense vector embeddings, identifying operational drift and sensor anomalies before corrupted inputs propagate into downstream agronomic models.
+
+### **Track 2: Robust, Resource-Constrained AI for Underserved Agricultural Systems & Agribusiness Economics**
 *From Satellite-Based Farm Monitoring to Alternative-Data Credit Access*
-- **The Challenge:** Standard remote-sensing models and conventional financial underwriting fail on fragmented, data-scarce smallholder landscapes.
-- **The Approach:** 
-  - Dynamic confidence-aware metacognitive routing: balancing compute budgets and data uncertainty when delegating across specialized sub-models.
-  - Agronomic-financial data fusion: binding rolling $z$-score crop stress anomalies with alternative transactional cash-flow signals (GST/UPI) to unlock fair credit underwriting for credit-invisible agri-enterprises.
+
+- **The Challenge:** Smallholder farmers and rural agri-MSMEs are systematically excluded from formal credit markets due to lack of collateral or audited accounts, while standard remote sensing fails on complex intercropped land.
+- **The Core Approach & Deployed Implementations:**
+  - **Metacognitive Multi-Agent Orchestration:** Dynamic, uncertainty-aware routing that balances compute latency, API costs, and sensor confidence to route queries across specialized sub-agents and degrade gracefully under low-confidence data.
+  - **Agronomic-Financial Data Fusion via [UdyamVitals / Avsar](https://github.com/Arpanthebaap/udyamvitals):**
+    - Fusing rolling $z$-score crop stress anomalies (evapotranspiration and land surface temperature) with transactional cash-flow signals (GST, UPI, Account Aggregator).
+    - Unlocks intent-based underwriting for credit-invisible agri-enterprises, reaching a **31% qualified-lead conversion rate** in prototype trials versus a <3% industry baseline (*IDBI Innovate 2026 / AWS*).
 
 ---
 
